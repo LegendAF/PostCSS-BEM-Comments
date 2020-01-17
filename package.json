@@ -1,6 +1,6 @@
 {
     "name": "vscode-css-ruleset-comments",
-    "displayName": "PostCSS Auto Comments",
+    "displayName": "CSS Ruleset Comments",
     "icon": "images/icon.png",
     "galleryBanner": {
         "color": "#232323",
@@ -8,7 +8,7 @@
     },
     "description": "Adds comments to the end of every css rule-set",
     "version": "0.0.1",
-    "publisher": "alex-fernandez",
+    "publisher": "LegendAF",
     "repository": "https://github.com/legendaf/vscode-css-ruleset-comments",
     "engines": {
         "vscode": "^1.28.0"
