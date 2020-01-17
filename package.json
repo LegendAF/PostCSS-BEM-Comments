@@ -1,0 +1,75 @@
+{
+    "name": "vscode-css-ruleset-comments",
+    "displayName": "PostCSS Auto Comments",
+    "icon": "images/icon.png",
+    "galleryBanner": {
+        "color": "#232323",
+        "theme": "dark"
+    },
+    "description": "Adds comments to the end of every css rule-set",
+    "version": "0.0.1",
+    "publisher": "alex-fernandez",
+    "repository": "https://github.com/legendaf/vscode-css-ruleset-comments",
+    "engines": {
+        "vscode": "^1.28.0"
+    },
+    "categories": [
+        "Formatters"
+    ],
+    "activationEvents": [
+        "onCommand:extension.formatCSSRulesetComments",
+        "onLanguage:PostCSS"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.formatCSSRulesetComments",
+                "title": "Format CSS Ruleset Comments"
+            }
+        ],
+        "languages": [
+            {
+                "id": "PostCSS",
+                "aliases": [
+                    "PostCSS"
+                ],
+                "extensions": [
+                    "PostCSS"
+                ]
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "CSS Ruleset Comments",
+            "properties": {
+                "cssRulesetComments.formatterEnable":{
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Use CSS Ruleset Comments as your default PostCSS formatter (will take precedence over any other formatters). Use this if you want to use format on save or just dont use other PostCSS formatters"
+                },
+                "cssRulesetComments.verboseSelectors": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Concatenate nested selectors for the end-of-block comment"
+                },
+                "cssRulesetComments.includeMediaQueries": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Include media query comments"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.21",
+        "eslint": "^4.11.0",
+        "@types/node": "^8.10.25",
+        "@types/mocha": "^2.2.42"
+    }
+}

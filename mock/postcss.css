@@ -1,0 +1,21 @@
+:root {
+  --primary-color: #efefef;
+  --secondary-color: #444;
+}
+
+.nestable-component {
+  background-color: var(--primary-color);
+  height: 1000px;
+  width: 1000px;
+  border: 4px solid transparent;
+
+  &--active {
+    border-color: yellow;
+  }
+
+  > .nestable-component {
+    background-color: var(--secondary-color);
+    height: 90%;
+    width: 90%;
+  }
+}
