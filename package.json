@@ -7,7 +7,7 @@
         "theme": "dark"
     },
     "description": "Adds comments to the end of every css rule-set",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "LegendAF",
     "repository": "https://github.com/legendaf/vscode-css-ruleset-comments",
     "engines": {
@@ -43,7 +43,7 @@
             "type": "object",
             "title": "CSS Ruleset Comments",
             "properties": {
-                "cssRulesetComments.formatterEnable":{
+                "cssRulesetComments.formatterEnable": {
                     "type": "boolean",
                     "default": false,
                     "description": "Use CSS Ruleset Comments as your default PostCSS formatter (will take precedence over any other formatters). Use this if you want to use format on save or just dont use other PostCSS formatters"
